@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="AnimationplayerExamBites.Pages.UILevel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AnimationplayerExamBites.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/images/background.png"/>
+            <!--LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="LightCoral" Offset="0" />
+                <GradientStop Color="White" Offset="1" />
+            </LinearGradientBrush-->
+
+        </Grid.Background>
+
+
+
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Button ToolTip="Home"  BorderThickness="0" Background="Transparent" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" Width="45" Click="Home_Button_Click">
+
+                <Ellipse Grid.Row="0" Grid.Column="0" Height="45" Width="45"  >
+                    <Ellipse.Fill>
+                        <ImageBrush   ImageSource="pack://application:,,,/images/examBitesLogo.png" />
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Button>
+            <StackPanel Margin="0 5 0 0" Width="400" Height="45" Orientation="Horizontal" Grid.Column="1">
+                <Button Click="Search_Button_Click" ToolTip="click to search the desired video" BorderThickness="0" Background="Transparent" Grid.Row="0"  Margin="0 0 0 0" Height="45"  >
+                    <Image Source="pack://application:,,,/images/searchicon.png"></Image>
+                </Button>
+                <TextBox ToolTip="Search videos" Background="Transparent" FontSize="20" x:Name="serachbox" Width="320" Margin="0 0 0 5"/>
+            </StackPanel>
+            <Button Width="45" ToolTip="settings" Grid.Column="2" Background="Transparent" BorderThickness="0" Margin="100 0 10 0">
+
+                <Ellipse Height="45" Width="45" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Top">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="pack://application:,,,/images/settingicon.png" />
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Margin="0,0,0,-55">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                
+            </Grid.ColumnDefinitions>
+            <Button Height="200" Width="150" ToolTip="class 9" BorderThickness="0" Background="Transparent" Grid.Column="0" Margin="144,60,70,100" Click="Level9_Button_Click">
+                <Image Source="pack://application:,,,/images/class9.png" Height="200" Width="150"></Image>
+            </Button>
+
+            <Button ToolTip="class 10" Height="200" Width="150" Grid.Column="1" BorderThickness="0" Background="Transparent" Margin="100,60,100,100" Click="Level10_Button_Click" >
+                <Image Source="pack://application:,,,/images/class10.png" Height="200" Width="150"></Image>
+            </Button>
+
+        </Grid>
+    </Grid>
+</UserControl>
